@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/Details/DetailsScreen.dart';
 import 'package:news_app/MyThemeData.dart';
 import 'package:news_app/Providers/AppConfigProvider.dart';
+import 'package:news_app/SplashScreen.dart';
 import 'package:news_app/Ui/Settings/SettingsScreen.dart';
 import 'package:news_app/Ui/Ui-home/HomeScreen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -40,11 +41,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme:  MyThemeData.lightTheme,
       routes: {
-        HomeScreen.ROUTE_NAME:(context)=>HomeScreen(),
+        SplashScreen.ROUTE_NAME:(_)=>SplashScreen(),
+        HomeScreen.ROUTE_NAME:(_)=>HomeScreen(),
         SettingsScreen.ROUTE_NAME:(_)=>SettingsScreen(),
         DetailsScreen.ROUTE_NAME:(_)=>DetailsScreen()
       },
-      initialRoute: HomeScreen.ROUTE_NAME,
+      initialRoute: SplashScreen.ROUTE_NAME,
 
       home: Scaffold(
 
