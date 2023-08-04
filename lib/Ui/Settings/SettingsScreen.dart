@@ -20,7 +20,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       drawer: MyDrawer(onCategoryRowClicked: onCategoryDrawerClicked,),
       appBar: AppBar(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomRight:  Radius.circular(24),bottomLeft:  Radius.circular(24))
         ),
@@ -32,15 +32,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            margin: EdgeInsets.all(16),
+            margin: const EdgeInsets.all(16),
               child: Text(AppLocalizations.of(context)!.language,style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.black,))),
           InkWell(
             onTap: (){
               showLanguageBottomSheet();
             },
             child: Container(
-              margin: EdgeInsets.all(16),
-              padding: EdgeInsets.all(12),
+              margin: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 color: Colors.white,
                 border: Border.all(color: Colors.green)
@@ -48,7 +48,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Row(
               children: [
                 Text(provider.appLanguage=='en'?'English':'العربية'),
-                Spacer(),
+                const Spacer(),
                 Icon(Icons.arrow_drop_down,color: Theme.of(context).primaryColor,)
               ],
             )

@@ -27,13 +27,13 @@ class MyApp extends StatelessWidget {
     provider=Provider.of<AppConfigProvider>(context);
     initSharedPreference();
     return MaterialApp(
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate, // Add this line
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         Locale('en'), // English
         Locale('ar'), // Spanish
       ],
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       },
       initialRoute: SplashScreen.ROUTE_NAME,
 
-      home: Scaffold(
+      home: const Scaffold(
 
       ),
     );

@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onCategoryRowClicked: onCategoryDrawerClicked,
       ),
       appBar: AppBar(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(24),
                 bottomLeft: Radius.circular(24))),
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       delegate: NewsSearch(
                           hintText: AppLocalizations.of(context)!.search));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.search,
                 ))
           ],

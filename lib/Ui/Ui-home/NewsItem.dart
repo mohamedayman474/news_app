@@ -18,7 +18,7 @@ class NewsItem extends StatelessWidget {
       },
       child: Container(
 
-       margin: EdgeInsets.all(4),
+       margin: const EdgeInsets.all(4),
        child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -37,7 +37,7 @@ class NewsItem extends StatelessWidget {
               progressIndicatorBuilder: (context, url, downloadProgress) =>
                   Transform.scale(scale: 0.2 ,
                       child: CircularProgressIndicator(value: downloadProgress.progress,color: Theme.of(context).primaryColor)),
-              errorWidget: (context, url, error) => Icon(
+              errorWidget: (context, url, error) => const Icon(
                 Icons.broken_image,
                 size: 100,
                 color: Colors.red,
@@ -45,16 +45,16 @@ class NewsItem extends StatelessWidget {
             ),
             ),
          Container(
-          margin: EdgeInsets.all(4),
+          margin: const EdgeInsets.all(4),
              child: Text(articles.source!.name==null?'is null':articles.source!.name!,
-              textAlign: TextAlign.start,style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold),)),
-         Container(margin: EdgeInsets.all(4),
+              textAlign: TextAlign.start,style: const TextStyle(fontSize: 11,fontWeight: FontWeight.bold),)),
+         Container(margin: const EdgeInsets.all(4),
              child: Text(articles.title!,textAlign: TextAlign.start,
-              style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
+              style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
          Container(
-             margin: EdgeInsets.all(4)
+             margin: const EdgeInsets.all(4)
              ,child: Text(articles.publishedAt==null ? 'is null':articles.publishedAt!,textAlign: TextAlign.end,
-          style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold),))
+          style: const TextStyle(fontSize: 11,fontWeight: FontWeight.bold),))
         ],
        ),
       ),
